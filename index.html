@@ -4,19 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo">Logo</div>
-      <div class="home">Home</div>
-      <div class="about">About</div>
-      <div class="experience">Experience</div>
-      <div class="projects">Projects</div>
-      <div class="contact">Contact</div>
-    </nav>
-    <section class="hero">
-      <section class="left"></section>
-      <section class="right"></section>
-    </section>
+    <header>
+      <nav class="nav">
+        <div class="nav__logo">Logo</div>
+        <div class="nav__right">
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Experience</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--btn">Contact</a>
+            </li>
+          </ul>
+          <button class="nav__theme--btn">Theme</button>
+        </div>
+      </nav>
+      <div class="hero">
+        <section class="hero__left">
+          <div class="name">Animesh</div>
+          <div class="last-name">Mohanty</div>
+          <div class="job-title">Frontend Developer</div>
+          <div class="subtitle">
+            With a passion to create modern web apps and learn new technologies
+          </div>
+          <ul>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+            <li>
+              <a href="#">Github</a>
+            </li>
+            <li>
+              <a href="#">LinkedIn</a>
+            </li>
+          </ul>
+          <button>Resume</button>
+        </section>
+        <section class="hero__right">
+          <img
+            src="./images/portfolio image 2.jpg"
+            alt=""
+            class="profile__img"
+          />
+        </section>
+      </div>
+    </header>
   </body>
 </html>

@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f3f3f3;
+  color: #444;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  width: 100%;
+  height: 4rem;
+}
+.nav__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav__links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.nav__item {
+  margin-left: 2rem;
+}
+/* .nav__link {
+  text-decoration: none;
+  color: #444;
+} */
+.nav__link:link,
+.nav__link:visited {
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+.nav__link--btn:link,
+.nav__link--btn:visited {
+  background-color: red;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: #222;
+}
+.nav__link:hover,
+.nav__link:active {
+  transform: scale(1.1);
+}
+.nav__theme--btn {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: none;
+  background-color: #f3f3f3;
+  font-family: inherit;
+}
+.nav__theme--btn:hover {
+  cursor: pointer;
+}
