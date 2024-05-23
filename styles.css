@@ -42,23 +42,41 @@ body {
 .nav__link:visited {
   color: inherit;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
   text-decoration: none;
+  position: relative;
 }
-.nav__link--btn:link,
+/* .nav__link--btn:link,
 .nav__link--btn:visited {
   background-color: red;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   color: #222;
-}
+} */
 .nav__link:hover,
 .nav__link:active {
-  transform: scale(1.1);
+  transform: scaleX(2);
+}
+.nav__link::after {
+  /*after pseudo element creates an immediate child for the nav__link element*/
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%; /*takes the width of its parent*/
+  background-color: #444;
+  translate: 0 0.3rem; /*move the underline a little below along the y-axis*/
+  transform: scaleX(0); /*scaleX(0) hides the pseudo element*/
+  transition: transform 0.3s ease-in;
+}
+.nav__link:hover::after,
+.nav__link:active::after {
+  transform: scaleX(1);
 }
 .nav__theme--btn {
   margin-left: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   border: none;
   background-color: #f3f3f3;
