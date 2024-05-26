@@ -9,7 +9,10 @@
   <body>
     <header>
       <nav class="nav">
-        <div class="nav__logo">Logo</div>
+        <div class="nav__logo">
+          <span class="nav__logo__first">ANI</span
+          ><span class="nav__logo__second">MESH</span>
+        </div>
         <div class="nav__right">
           <ul class="nav__links">
             <li class="nav__item">
@@ -33,24 +36,80 @@
       </nav>
       <div class="hero">
         <section class="hero__left">
-          <div class="name">Animesh</div>
-          <div class="last-name">Mohanty</div>
-          <div class="job-title">Frontend Developer</div>
+          <div class="hero__name">
+            <div class="hero__first-name">Animesh</div>
+            <div class="hero__last-name">Mohanty</div>
+          </div>
+
+          <div class="hero__job-title">Frontend Developer</div>
           <div class="subtitle">
             With a passion to create modern web apps and learn new technologies
           </div>
-          <ul>
-            <li>
-              <a href="#">Twitter</a>
+          <ul class="hero__socials">
+            <li class="hero__social">
+              <a href="#" class="social__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#003566"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-twitter"
+                >
+                  <path
+                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+                  />
+                </svg>
+              </a>
             </li>
-            <li>
-              <a href="#">Github</a>
+            <li class="hero__social">
+              <a href="#" class="social__link"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#003566"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-github"
+                >
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                  />
+                  <path d="M9 18c-4.51 2-5-2-7-2" /></svg
+              ></a>
             </li>
-            <li>
-              <a href="#">LinkedIn</a>
+            <li class="hero__social">
+              <a href="#" class="social__link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none "
+                  stroke="#003566"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-linkedin"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
             </li>
           </ul>
-          <button>Resume</button>
+          <button class="hero__resume">Resume</button>
         </section>
         <section class="hero__right">
           <img
@@ -62,33 +121,35 @@
       </div>
     </header>
     <section class="about">
-      <h1>About Me</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-        nostrum, laborum doloremque doloribus reiciendis praesentium. Eligendi,
-        ut eaque amet nobis sunt ipsum recusandae deleniti molestias magni totam
-        officiis porro? Veritatis libero voluptatum ducimus quod temporibus
-        magni, praesentium reiciendis dolor perferendis.
-      </p>
-      <ul>
-        <li class="education">
-          <div>Education</div>
-          <div>
-            <h3>College of Engineering and Technology</h3>
-            <p>B.Tech <span>2013-2017</span></p>
-          </div>
-        </li>
-        <li class="skills">
-          <h3>SKILLS</h3>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JAVASCRIPT</li>
-            <li>NODE JS</li>
-            <li>REACT JS</li>
-          </ul>
-        </li>
-      </ul>
+      <h1 class="about__title">About Me</h1>
+      <div class="about__section">
+        <p class="about__sub-title">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          nostrum, laborum doloremque doloribus reiciendis praesentium.
+          Eligendi, ut eaque amet nobis sunt ipsum recusandae deleniti molestias
+          magni totam officiis porro? Veritatis libero voluptatum ducimus quod
+          temporibus magni, praesentium reiciendis dolor perferendis.
+        </p>
+        <ul>
+          <li class="education">
+            <h3>EDUCATION</h3>
+            <div>
+              <h3>College of Engineering and Technology</h3>
+              <p>B.Tech <span>2013-2017</span></p>
+            </div>
+          </li>
+          <li class="skills">
+            <h3>SKILLS</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JAVASCRIPT</li>
+              <li>NODE JS</li>
+              <li>REACT JS</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="experience">
       <h1>EXPERIENCE</h1>
@@ -103,18 +164,28 @@
     </section>
     <section class="contact">
       <h1>CONTACT ME</h1>
-      <div class="my__contact"></div>
-      <div class="customer__contact">
-        <form action="">
-          <label for="">Your mail</label>
-          <input type="text" />
-          <label for="">Your phone number</label>
-          <input type="number" />
-          <label for="">Message</label>
-          <textarea name="" id=""></textarea>
-        </form>
+      <div class="contact__details">
+        <div class="my__contact">
+          <div class="mail">animeshmohanty.am@gmail.com</div>
+          <div class="number">+91 9040167573</div>
+        </div>
+        <div class="customer__contact">
+          <form action="" class="customer__contact-form">
+            <label for="">Your mail:</label>
+            <input type="text" />
+            <label for="">Your phone number:</label>
+            <input type="number" />
+            <label for="">Message:</label>
+            <textarea name="" id=""></textarea>
+          </form>
+        </div>
       </div>
     </section>
-    <footer>Created by @animeshmohanty.am@gmail.com</footer>
+    <div class="event-demo">
+      <h3>Animesh</h3>
+    </div>
+    <div class="modal hidden">Animesh</div>
+    <footer>Created by @Animesh</footer>
+    <script src="app.js"></script>
   </body>
 </html>

@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
+:root {
+  --page-color: #003566;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,6 +22,11 @@ body {
   padding: 0 3rem;
   width: 100%;
   height: 4rem;
+  box-shadow: 0 2px 15px 0 var(--page-color);
+}
+.nav__logo__second {
+  background-color: var(--page-color);
+  color: #f3f3f3;
 }
 .nav__right {
   display: flex;
@@ -56,6 +63,7 @@ body {
 .nav__link:hover,
 .nav__link:active {
   transform: scaleX(2);
+  color: var(--page-color);
 }
 .nav__link::after {
   /*after pseudo element creates an immediate child for the nav__link element*/
@@ -65,7 +73,7 @@ body {
   bottom: 0;
   height: 1px;
   width: 100%; /*takes the width of its parent*/
-  background-color: #444;
+  background-color: var(--page-color);
   translate: 0 0.3rem; /*move the underline a little below along the y-axis*/
   transform: scaleX(0); /*scaleX(0) hides the pseudo element*/
   transition: transform 0.3s ease-in;
@@ -84,4 +92,131 @@ body {
 }
 .nav__theme--btn:hover {
   cursor: pointer;
+}
+
+/*HERO SECTION*/
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin-top: 2rem;
+}
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.2rem;
+}
+.hero__name {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.hero__last-name {
+  /* font-size: 1.5rem; */
+  margin-left: 4rem;
+}
+.hero__job-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.hero__socials {
+  display: flex;
+}
+.hero__social {
+  text-decoration: none;
+  margin-right: 1.5rem;
+  list-style: none;
+}
+.social__link:link,
+.social__link:visited {
+  text-decoration: none;
+  height: 1rem;
+  width: 1rem;
+}
+.hero__resume {
+  outline: none;
+  font-family: inherit;
+  font-size: 1.3rem;
+  border: none;
+  background-color: var(--page-color);
+  color: #f3f3f3;
+  padding: 1rem 1.5rem;
+  border-radius: 1.8rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+.profile__img {
+  height: 25rem;
+  width: 20rem;
+  /* border-radius: 50% 0 50% 0; */
+  background-position: 50% 50%;
+}
+
+/*ABOUT*/
+.about__title {
+  font-size: 2rem;
+  color: var(--page-color);
+}
+.about__sub-title {
+  width: 50%;
+}
+.about__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about__section ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style: none;
+}
+
+/*EXPERIENCE*/
+.experience h1 {
+  color: var(--page-color);
+}
+
+/*PROJECTS*/
+.projects h1 {
+  color: var(--page-color);
+}
+
+/*CONTACT*/
+.contact h1 {
+  color: var(--page-color);
+}
+.contact__details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.customer__contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/*FOOTER*/
+footer {
+  text-align: center;
+  color: var(--page-color);
+}
+
+.event-demo {
+  display: inline-block;
+}
+.modal {
+  display: inline-block;
+  border: 2px solid red;
+  height: 2rem;
+  width: 6rem;
+  position: relative;
+  top: 2rem;
+}
+.hidden {
+  display: none;
 }
