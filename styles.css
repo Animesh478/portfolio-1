@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --page-color: #003566;
+  --page-color--light: rgba(0, 53, 102, 0.2);
   --header-font: 2.5rem;
+  --secondary-font: 1.2rem;
 }
 * {
   box-sizing: border-box;
@@ -13,6 +15,11 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #f3f3f3;
   color: #444;
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
 }
 
 /* NAVIGATION */
@@ -118,12 +125,33 @@ body {
   /* font-size: 1.5rem; */
   margin-left: 6rem;
 }
+.highlight {
+  position: relative;
+  /* color: var(--page-color--light); */
+  color: #f3f3f3;
+  /* border-color: var(--page-color); */
+  filter: drop-shadow(1px 1px 0 var(--page-color))
+    drop-shadow(-1px 1px 0 var(--page-color))
+    drop-shadow(1px -1px 0 var(--page-color))
+    drop-shadow(-1px -1px 0 var(--page-color));
+}
+/* .highlight::after {
+  content: "";  
+  background-image: var(--page-color);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: -1;
+} */
 .hero__job-title {
   font-size: 2rem;
   font-weight: 600;
 }
 .hero__job-subtitle {
-  font-size: 1.2rem;
+  font-size: var(--secondary-font);
 }
 .hero__socials {
   display: flex;
@@ -160,7 +188,14 @@ body {
   border-radius: 50%;
   border: none;
 } */
-.hero__resume {
+.hero__btns {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+.hero__btn {
   outline: none;
   font-family: inherit;
   font-size: 1.3rem;
@@ -170,8 +205,10 @@ body {
   padding: 1rem 1.5rem;
   border-radius: 1.8rem;
   font-weight: 500;
-  margin-top: 0.5rem;
+
   cursor: pointer;
+  width: 12rem;
+  height: 4rem;
 }
 
 .hero__right {
@@ -198,37 +235,86 @@ body {
 /*ABOUT*/
 .about {
   margin-top: 3rem;
+  background-color: var(--page-color--light);
+  padding: 1.5rem;
 }
 .about__title {
   font-size: var(--header-font);
   color: var(--page-color);
   text-align: center;
 }
-.about__sub-title {
-  width: 50%;
+
+.about__section--intro {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.about__section--description {
+  width: 75%;
+  margin-top: 1rem;
+  font-size: var(--secondary-font);
+  text-align: center;
 }
 .about__section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
-.about__section ul {
+.tabs {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateY(-50%);
 }
-
-/*EXPERIENCE*/
-.experience h1 {
+.tab {
+  font-size: var(--secondary-font);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  text-align: center;
+  width: 10rem;
+  background-color: #f3f3f3;
   color: var(--page-color);
-  font-size: var(--header-font);
+  border-radius: 1rem;
+  /* outline: none; */
+  border: none;
+  box-shadow: 1px 1px 2px var(--page-color);
+}
+.tab--active {
+  color: #f3f3f3;
+  background-color: var(--page-color);
+}
+.about__details {
+  background-color: #f3f3f3;
+  /* border: 1px solid black; */
+  margin-top: 5rem;
+  width: 60%;
+  height: 20rem;
+  border-radius: 1rem;
+}
+.content__education {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  align-items: center;
+  /* text-align: center; */
+}
+.content--hidden {
+  display: none;
+}
+.content--active {
+  display: block;
 }
 
 /*PROJECTS*/
+.projects {
+  margin-top: 3rem;
+}
 .projects h1 {
   color: var(--page-color);
   font-size: var(--header-font);
+  text-align: center;
 }
 
 /*CONTACT*/
@@ -237,6 +323,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 3rem;
 }
 .contact h1 {
   color: var(--page-color);
@@ -248,16 +335,16 @@ body {
 }
 .contact__details {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 5rem;
-  border-radius: 1rem;
+  /* gap: 5rem; */
+  /* border-radius: 1rem; */
   margin: 1.5rem auto;
-  padding: 2rem;
-  background-color: #f3f4f6;
+  padding: 1rem;
+  background-color: var(--page-color--light);
   color: var(--page-color);
   box-shadow: 0 2px 10px 1px;
-  width: 80%;
+  width: 100%;
   margin-top: 2rem;
 }
 
@@ -276,17 +363,17 @@ body {
 .customer__contact-form label {
   font-size: 1.2rem;
   font-weight: 500;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 .customer__details {
   height: 3rem;
-  width: 20rem;
+  width: 90%;
   border-radius: 0.5rem;
   outline: none;
   font-size: 1.2rem;
   border: 1px solid var(--page-color);
   padding: 0.5rem;
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 /*Styling the placeholder*/
@@ -315,23 +402,16 @@ body {
   width: 30rem;
   resize: none;
 }
+.form--submit {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--page-color);
+  color: #f3f3f3;
+  border-radius: 1rem;
+}
 /*FOOTER*/
 footer {
   text-align: center;
   color: var(--page-color);
-}
-
-.event-demo {
-  display: inline-block;
-}
-.modal {
-  display: inline-block;
-  border: 2px solid red;
-  height: 2rem;
-  width: 6rem;
-  position: relative;
-  top: 2rem;
-}
-.hidden {
-  display: none;
 }

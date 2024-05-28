@@ -22,9 +22,6 @@
               <a href="#" class="nav__link">About</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Experience</a>
-            </li>
-            <li class="nav__item">
               <a href="#" class="nav__link">Projects</a>
             </li>
             <li class="nav__item">
@@ -37,8 +34,12 @@
       <div class="hero">
         <section class="hero__left">
           <div class="hero__name">
-            <div class="hero__first-name">Animesh</div>
-            <div class="hero__last-name">Mohanty</div>
+            <div class="hero__first-name">
+              <span>Ani</span><span class="highlight">mesh</span>
+            </div>
+            <div class="hero__last-name">
+              <span class="highlight">Moh</span><span>anty</span>
+            </div>
           </div>
 
           <div class="hero__job-title">Frontend Developer</div>
@@ -109,7 +110,10 @@
               </a>
             </li>
           </ul>
-          <button class="hero__resume">Resume</button>
+          <div class="hero__btns">
+            <button class="hero__btn hero__resume">Resume</button>
+            <button class="hero__btn hire-me">Hire ME &RightArrow;</button>
+          </div>
         </section>
         <section class="hero__right">
           <svg
@@ -549,41 +553,46 @@
     <section class="about">
       <h1 class="about__title">About Me</h1>
       <div class="about__section">
-        <p class="about__sub-title">
+        <div class="about__section--intro">
+          Hello there! I am Animesh. Nice to meet you.
+        </div>
+        <p class="about__section--description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
           nostrum, laborum doloremque doloribus reiciendis praesentium.
           Eligendi, ut eaque amet nobis sunt ipsum recusandae deleniti molestias
           magni totam officiis porro? Veritatis libero voluptatum ducimus quod
           temporibus magni, praesentium reiciendis dolor perferendis.
         </p>
-        <ul>
-          <li class="education">
-            <h3>EDUCATION</h3>
-            <div>
-              <h3>College of Engineering and Technology</h3>
-              <p>B.Tech <span>2013-2017</span></p>
+        <div class="about__details">
+          <div class="tabs">
+            <button class="tab tab--active education">Education</button>
+            <button class="tab skills">Skills</button>
+            <button class="tab experience">Experience</button>
+          </div>
+          <div class="content">
+            <div class="content__education content--hidden content--active">
+              <div class="college">
+                <h3>College of Engineering and Technology</h3>
+                <p>
+                  B.Tech in <i>Textile Engineering</i> <span>2013-2017</span>
+                </p>
+              </div>
+              <div class="school">
+                <h3>Ravenshaw University</h3>
+                <p>2011-2013</p>
+              </div>
             </div>
-          </li>
-          <li class="skills">
-            <h3>SKILLS</h3>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JAVASCRIPT</li>
-              <li>NODE JS</li>
-              <li>REACT JS</li>
-            </ul>
-          </li>
-        </ul>
+            <div class="content__skills content--hidden">
+              <div>HTML</div>
+              <div>CSS</div>
+              <div>JAVASCRIPT</div>
+              <div>NODE JS</div>
+              <div>REACT JS</div>
+            </div>
+            <div class="content__experience content--hidden"></div>
+          </div>
+        </div>
       </div>
-    </section>
-    <section class="experience">
-      <h1>Experience</h1>
-      <ul>
-        <li>NGO</li>
-        <li>Indian Bank</li>
-        <li>Shahi Exports</li>
-      </ul>
     </section>
     <section class="projects">
       <h1>Projects</h1>
@@ -630,6 +639,7 @@
               id=""
               class="customer__details customer__message"
             ></textarea>
+            <input type="submit" value="Submit" class="form--submit" />
           </form>
         </div>
       </div>
